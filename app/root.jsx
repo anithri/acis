@@ -6,9 +6,13 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import styles from "./tailwind.css";
+import tailwind from "./stylesheets/tailwind.stylesheet.css";
+import styles from "./stylesheets/app.stylesheet.css";
 
-export const links = () => [{ rel: "stylesheet", href: styles }];
+export const links = () => [
+  { rel: "stylesheet", href: tailwind },
+  { rel: "stylesheet", href: styles },
+];
 
 export const meta = () => ({
   charset: "utf-8",
@@ -23,7 +27,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="bg-slate-200 p-10">
+      <body>
         <Outlet />
         <ScrollRestoration />
         <Scripts />
