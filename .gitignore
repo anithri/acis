@@ -7,6 +7,7 @@ yarn-error.log*
 lerna-debug.log*
 .envrc
 .idea/
+/app/stylesheets/
 # Remix build files
 /.cache
 /build
