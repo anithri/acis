@@ -1,3 +1,24 @@
 body {
   @apply bg-slate-300 p-10;
 }
+
+main {
+  @apply lg:container mx-auto;
+  & > header {
+    @apply grid grid-cols-3;
+    & > h1 {
+      @apply pb-4 text-center;
+    }
+    & > button {
+      @apply relative inline-flex h-6 w-11 items-center rounded-full;
+    }
+  }
+}
+
+.acisList {
+  @apply grid grid-cols-3 rounded-md border border-slate-50 p-4 bg-slate-200 mb-4;
+}
+
+.acisRequest {
+  @apply rounded-md border border-slate-50 p-4 bg-slate-200 text-center mb-4;
+}
