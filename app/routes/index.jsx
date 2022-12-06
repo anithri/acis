@@ -9,6 +9,7 @@ import { useState } from 'react'
 import { dateCompare } from '~/utils/dateCompare'
 
 export const loader = async () => {
+
   return json({
     stations: await getStations(),
     stationData: await getStationData(),
