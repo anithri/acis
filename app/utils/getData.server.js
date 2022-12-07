@@ -24,17 +24,27 @@ const parseSummariesData = (stations, summaries) =>
     name: stations[summary.id],
   }))
 
-export const getStationData = async () =>
-  await Promise.all([getStations(), getStationSummaries()])
+const extractMessages = (request) => {
+  const url = new URL(request.url)
+  return Promise.resolve(url.searchParams.getAll('message'))
+}
+
+export const getStationData = async (request) =>
+  await Promise.all([
+    getStations(),
+    getStationSummaries(),
+    extractMessages(request),
+  ])
     .catch((e) => console.error('getIndexData', e))
-    .then(([stations, summaries]) => {
+    .then(([stations, summaries, messages]) => {
       return {
         stations: parseStationsData(stations, summaries),
         summaries: parseSummariesData(stations, summaries),
+        messages,
       }
     })
     .then((hsh) => {
-      console.log(hsh)
+      // console.log(hsh)
       return hsh
     })
 

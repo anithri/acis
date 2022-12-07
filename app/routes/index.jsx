@@ -8,10 +8,11 @@ import { StationSummaries } from '~/components/StationSummaries'
 import { StationSelect } from '~/components/StationSelect'
 import { usePollingRefresh } from '~/utils/usePollingRefresh'
 
-export const loader = async () => await json(await getStationData())
+export const loader = async ({ request }) =>
+  await json(await getStationData(request))
 
 export default function Index() {
-  const { stations, summaries } = useLoaderData()
+  const { stations, summaries, messages } = useLoaderData()
   const { refresh } = useDataRefresh()
   const { isPolling, togglePolling } = usePollingRefresh({ refresh })
   // setup polling State
@@ -20,6 +21,9 @@ export default function Index() {
 
   return (
     <Layout isPolling={isPolling} togglePolling={togglePolling}>
+      {messages.length
+        ? messages.map((msg, idx) => <div key={`msg-${idx}`}>{msg}</div>)
+        : null}
       <StationSummaries
         title="Current Data"
         className="acisList"
