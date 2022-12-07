@@ -1,3 +1,3 @@
 export const FetchDataLink = ({stationId}) => {
-  <Form method="post" action="/station_fetch/fetch_data"></Form>
+  <Form method="post" action="/fetch_stations/fetch_data"></Form>
 }

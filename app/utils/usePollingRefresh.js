@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useDataRefresh } from 'remix-utils'
 
-const DEFAULT_INTERVAL = 30 * 1000
+const DEFAULT_INTERVAL = 3 * 1000
 
 export const usePollingRefresh = ({ interval = DEFAULT_INTERVAL, refresh }) => {
   const [isPolling, setPolling] = useState(false)
@@ -19,7 +19,7 @@ export const usePollingRefresh = ({ interval = DEFAULT_INTERVAL, refresh }) => {
     }
     const intervalObj = setInterval(doRefresh, interval)
     return () => clearInterval(intervalObj)
-  }, [refresh, isPolling])
+  }, [refresh])
 
   return {
     clearPollingInterval,
