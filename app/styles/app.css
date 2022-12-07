@@ -22,3 +22,7 @@ main {
 .acisRequest {
   @apply rounded-md border border-slate-50 p-4 bg-slate-200 text-center mb-4;
 }
+
+.refreshBtn {
+  @apply text-center bg-green-500 text-white;
+}

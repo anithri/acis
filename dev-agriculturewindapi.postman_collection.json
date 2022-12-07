@@ -1,0 +1,615 @@
+{
+	"info": {
+		"_postman_id": "8cd5378b-bdb6-4ab1-bb47-41dfab9ed927",
+		"name": "dev-agriculturewindapi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/getDownloadURL",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "QVCeD5Bp8C7tv3g0nL3572K811dMr7aN72FIcamk",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x-api-key",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"station_id\": \"15219\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/getDownloadURL",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"getDownloadURL"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"station_id\": \"15219\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/getDownloadURL",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"getDownloadURL"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "82"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 01 Dec 2022 20:04:29 GMT"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "123b431e-8065-4daa-86e6-bd5156696a92"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "ce5PnFD3vHcFwlA="
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-638908ca-7e5ddbbd7fc05cd662857723;Sampled=0"
+						},
+						{
+							"key": "X-Cache",
+							"value": "Miss from cloudfront"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 5426e173edd65a7a7e49d28e75692b50.cloudfront.net (CloudFront)"
+						},
+						{
+							"key": "X-Amz-Cf-Pop",
+							"value": "DEN50-C1"
+						},
+						{
+							"key": "X-Amz-Cf-Id",
+							"value": "ADz4R463O_vpgp8fjbMrj8Oq-EYjKSWTH6Pdr1p-V97DT722iREOaw=="
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"download_url\": \"s3://agriculture-weather-data/15219/weather_data_15219_All.csv\"\n}"
+				},
+				{
+					"name": "/Failure",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"station_id\": \"15212\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/getDownloadURL",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"getDownloadURL"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "133"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 01 Dec 2022 21:14:32 GMT"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "6368ae2d-c760-4484-b67a-0c359d199124"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "cfDgzH8WPHcFt9Q="
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-63891938-70785ffb29efa01560d0adf4;Sampled=0"
+						},
+						{
+							"key": "X-Cache",
+							"value": "Error from cloudfront"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 d7dd12c04fd34e69d212dc8db302bfc2.cloudfront.net (CloudFront)"
+						},
+						{
+							"key": "X-Amz-Cf-Pop",
+							"value": "DEN50-C1"
+						},
+						{
+							"key": "X-Amz-Cf-Id",
+							"value": "4xql11_6zAPuXVx_Qge-6JG8RPvVYHLgYh8WDVKz5mcQMwESnSL53Q=="
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 400,\n    \"error\": \"An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "/getExistingLastDate",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "QVCeD5Bp8C7tv3g0nL3572K811dMr7aN72FIcamk",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x-api-key",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/getExistingLastDate",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"getExistingLastDate"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/getExistingLastDate",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"getExistingLastDate"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "298"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 01 Dec 2022 20:03:49 GMT"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "1fcbb3fb-3fee-4366-976d-20d67c4375d2"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "ce5JHEP8vHcFdLg="
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-638908a0-338fed6352c1639d54ff2a62;Sampled=0"
+						},
+						{
+							"key": "X-Cache",
+							"value": "Miss from cloudfront"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 5426e173edd65a7a7e49d28e75692b50.cloudfront.net (CloudFront)"
+						},
+						{
+							"key": "X-Amz-Cf-Pop",
+							"value": "DEN50-C1"
+						},
+						{
+							"key": "X-Amz-Cf-Id",
+							"value": "QQot4sbI62uCOnoG5q9V6TxHRwEsxK4hAqnoC2kgl7pviFXX2XUORw=="
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"status\": {\n        \"10540\": {\n            \"id\": \"10540\",\n            \"fileModifyTime\": \"2022-12-01 18:31:54+00:00\",\n            \"lastDate\": \"Dec_2022\"\n        },\n        \"15219\": {\n            \"id\": \"15219\",\n            \"fileModifyTime\": \"2022-12-01 18:53:40+00:00\",\n            \"lastDate\": \"Dec_2022\"\n        }\n    },\n    \"msg\": \"Dates Json: '15219/existing_dates.json' has been updated on S3\"\n}"
+				}
+			]
+		},
+		{
+			"name": "/getStationInfo",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "QVCeD5Bp8C7tv3g0nL3572K811dMr7aN72FIcamk",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x-api-key",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/getStationInfo",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"getStationInfo"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/getStationInfo",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"getStationInfo"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "13626"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 01 Dec 2022 18:00:41 GMT"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "c495c236-43e4-4eca-8537-ee32a6c1b96c"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "cenGpEVAvHcFzjw="
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-6388ebc3-6ef48a9c062b7a4e26312a95;Sampled=0"
+						},
+						{
+							"key": "X-Cache",
+							"value": "Miss from cloudfront"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 db88a4a8e4f93b9bfeab5462f253c306.cloudfront.net (CloudFront)"
+						},
+						{
+							"key": "X-Amz-Cf-Pop",
+							"value": "DEN50-C1"
+						},
+						{
+							"key": "X-Amz-Cf-Id",
+							"value": "ZokbO_qyp9b7okUgbGDz2jOLNnb5cxzfHXhLcHqTzGl6txBjlm6NcQ=="
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"877\": \"Atlee AGCM\",\n    \"892\": \"Queenstown\",\n    \"907\": \"Azure AGCM\",\n    \"1501\": \"Aurora\",\n    \"1502\": \"Horizon\",\n    \"1503\": \"Steepbank\",\n    \"2004\": \"Banff CS\",\n    \"2015\": \"Barrhead CS\",\n    \"2024\": \"Beauvais Park\",\n    \"2032\": \"Bow Valley\",\n    \"2049\": \"Calgary Int'L CS\",\n    \"2058\": \"Claresholm\",\n    \"2063\": \"Cold Lake A\",\n    \"2068\": \"Cop Upper\",\n    \"2078\": \"Coronation Climate\",\n    \"2086\": \"Drumheller East\",\n    \"2091\": \"Edmonton Namao AWOS A\",\n    \"2096\": \"Edmonton Int'L CS\",\n    \"2104\": \"Edmonton Blatchford\",\n    \"2110\": \"Edson Climate\",\n    \"2118\": \"Edson\",\n    \"2123\": \"Elk Island Nat Park\",\n    \"2131\": \"Fort Chipewyan\",\n    \"2136\": \"Fort Mcmurray A\",\n    \"2141\": \"Fort Nelson A\",\n    \"2146\": \"Fort Smith A\",\n    \"2149\": \"Fort St John A\",\n    \"2154\": \"Lethbridge CDA\",\n    \"2155\": \"Garden River\",\n    \"2163\": \"Grande Prairie A\",\n    \"2168\": \"High Level\",\n    \"2173\": \"James River Ranger Station\",\n    \"2183\": \"Lac La Biche Climate\",\n    \"2197\": \"Lloydminster\",\n    \"2219\": \"Lake Louise\",\n    \"2224\": \"Lee Creek 99\",\n    \"2229\": \"Medicine Hat\",\n    \"2249\": \"Lethbridge\",\n    \"2262\": \"Medicine Hat RCS\",\n    \"2274\": \"Mildred Lake\",\n    \"2283\": \"Milk River\",\n    \"2299\": \"Peace River A\",\n    \"2304\": \"Pincher Creek\",\n    \"2309\": \"Pincher Creek Cr10\",\n    \"2314\": \"Red Deer Regional A\",\n    \"2324\": \"Sask River Crossing 2\",\n    \"2332\": \"Slave Lake\",\n    \"2337\": \"Stavely AAFC\",\n    \"2345\": \"Edmonton Stony Plain CS\",\n    \"2356\": \"Sundre A\",\n    \"2365\": \"Sunwapta\",\n    \"2375\": \"Three Hills AGCM\",\n    \"2386\": \"Twin Lakes\",\n    \"2387\": \"Waterton Park Gate\",\n    \"2396\": \"Vegreville\",\n    \"2401\": \"Violet Grove CS\",\n    \"2417\": \"Whitecourt A\",\n    \"2422\": \"Whitecourt Alberta\",\n    \"2546\": \"Christina Lake near Winefred Lake\",\n    \"2553\": \"Parlby Creek near Mirror\",\n    \"4279\": \"Jasper Warden\",\n    \"4410\": \"Coalcamp Creek\",\n    \"4431\": \"Fallentimber Creek\",\n    \"4449\": \"Compression Ridge\",\n    \"4461\": \"Hendrickson Creek\",\n    \"4483\": \"Limestone Mountain\",\n    \"4508\": \"Nordegg CS\",\n    \"4524\": \"Sheep River II\",\n    \"4539\": \"Skoki Mountain\",\n    \"4554\": \"Streeter Creek\",\n    \"4569\": \"Red Earth\",\n    \"5012\": \"Breton Plots\",\n    \"5064\": \"Rivercourse AGCM\",\n    \"5097\": \"Rosalind AGCM\",\n    \"5110\": \"Shonts AGCM\",\n    \"5122\": \"Viking AGCM\",\n    \"5134\": \"Wetaskiwin AGCM\",\n    \"5156\": \"Killam AGDM\",\n    \"5191\": \"Mannville AGCM\",\n    \"5416\": \"Greencourt\",\n    \"5436\": \"Paddle Dam\",\n    \"5590\": \"Gordon Lake Lookout\",\n    \"5751\": \"Rocky Mountain House(AUT)\",\n    \"5765\": \"Esther 1\",\n    \"6003\": \"Kessler AGCM\",\n    \"6008\": \"Thorsby AGCM\",\n    \"6014\": \"Ribstone South AGCM\",\n    \"6015\": \"Holden AGDM\",\n    \"6026\": \"Hughenden AGCM\",\n    \"6033\": \"Crestomere AGCM\",\n    \"6036\": \"Stettler AGDM\",\n    \"6039\": \"Alliance AGCM\",\n    \"6042\": \"Forestburg AGCM\",\n    \"6045\": \"Ferintosh AGCM\",\n    \"6048\": \"Bellshill AGCM\",\n    \"6051\": \"Delburne AGCM\",\n    \"6054\": \"Big Valley AGCM\",\n    \"6057\": \"Halkirk AGCM\",\n    \"6060\": \"Cadogan AGCM\",\n    \"6090\": \"Worsley AGCM\",\n    \"6100\": \"Eureka River AGCM\",\n    \"7191\": \"Ballater AGCM\",\n    \"7290\": \"Kinsella Research\",\n    \"7309\": \"St. Albert Research\",\n    \"9020\": \"Brocket AGDM\",\n    \"9084\": \"Del Bonita AGDM\",\n    \"9187\": \"La Crete AGCM\",\n    \"9210\": \"Manning AGDM\",\n    \"9211\": \"Barnwell AGDM\",\n    \"9212\": \"Hawk Hills AGCM\",\n    \"9269\": \"Masinasin AGDM\",\n    \"9295\": \"Wrentham AGDM\",\n    \"9324\": \"Foremost AGDM\",\n    \"9353\": \"Champion AGDM\",\n    \"9357\": \"Cleardale AGDM\",\n    \"9415\": \"Schuler AGDM\",\n    \"9416\": \"Savanna AGCM\",\n    \"9457\": \"Fairview AGDM\",\n    \"9493\": \"Pakowki Lake AGCM\",\n    \"9494\": \"Brownvale AGCM\",\n    \"9512\": \"Jean Cote AGCM\",\n    \"9526\": \"Manyberries AGCM\",\n    \"9578\": \"Etzikom AGCM\",\n    \"9579\": \"Rycroft AGCM\",\n    \"9609\": \"Irvine AGCM\",\n    \"9610\": \"Eaglesham AGCM\",\n    \"9637\": \"Travers AGCM\",\n    \"9638\": \"Peoria AGDM\",\n    \"9680\": \"La Glace AGCM\",\n    \"9681\": \"Barons AGCM\",\n    \"9694\": \"Teepee Creek AGCM\",\n    \"9710\": \"Fort Macleod AGCM\",\n    \"9726\": \"High Prairie AGDM\",\n    \"9747\": \"Blood Tribe Ag. Project IMCIN\",\n    \"9769\": \"Valleyview AGDM\",\n    \"9815\": \"Raymond IMCIN\",\n    \"9835\": \"Lethbridge Demo Farm IMCIN\",\n    \"9852\": \"Fort Assiniboine AGCM\",\n    \"9882\": \"Athabasca AGCM\",\n    \"9883\": \"Iron Springs IMCIN\",\n    \"9918\": \"Grassy Lake IMCIN\",\n    \"9927\": \"Atmore AGDM\",\n    \"9942\": \"Enchant IMCIN\",\n    \"9986\": \"Fincastle IMCIN\",\n    \"10007\": \"Seven Persons IMCIN\",\n    \"10027\": \"Rolling Hills AGCM\",\n    \"10045\": \"Bow Island North IMCIN\",\n    \"10067\": \"Mossleigh AGCM\",\n    \"10159\": \"Bassano AGCM\",\n    \"10176\": \"Beiseker AGCM\",\n    \"10192\": \"Dewberry AGCM\",\n    \"10210\": \"Gilt Edge North AGCM\",\n    \"10231\": \"Kitscoty AGCM\",\n    \"10256\": \"New Sarepta AGCM\",\n    \"10273\": \"Spondin AGCM\",\n    \"10290\": \"Wimborne AGCM\",\n    \"10310\": \"Albert Hall AGCM\",\n    \"10329\": \"Busby AGCM\",\n    \"10347\": \"Dupre AGCM\",\n    \"10362\": \"Evansburg AGCM\",\n    \"10377\": \"Glenevis AGCM\",\n    \"10390\": \"Legal AGCM\",\n    \"10402\": \"Myrnam AGCM\",\n    \"10418\": \"Radway AGCM\",\n    \"10436\": \"St. Lina AGCM\",\n    \"10452\": \"Hemaruka AGCM\",\n    \"10453\": \"Tulliby Lake AGCM\",\n    \"10469\": \"Vilna AGCM\",\n    \"10484\": \"Craigmyle AGCM\",\n    \"10500\": \"Gleichen AGCM\",\n    \"10534\": \"Hespero AGCM\",\n    \"10540\": \"Abee AGDM\",\n    \"10577\": \"Sedalia AGCM\",\n    \"10585\": \"Andrew AGDM\",\n    \"10601\": \"Standard AGCM\",\n    \"10793\": \"Dapp AGDM\",\n    \"10820\": \"Lindbergh AGDM\",\n    \"10849\": \"Mundare AGDM\",\n    \"10880\": \"Oliver AGDM\",\n    \"10909\": \"Rich Lake AGDM\",\n    \"10934\": \"Smoky Lake AGDM\",\n    \"10961\": \"St. Paul AGDM\",\n    \"10967\": \"Two Hills AGDM\",\n    \"10993\": \"Vermilion AGDM\",\n    \"11019\": \"Bodo AGDM\",\n    \"11049\": \"Consort AGDM\",\n    \"11071\": \"Hussar AGDM\",\n    \"11097\": \"Morrin AGDM\",\n    \"11122\": \"Olds College AGDM\",\n    \"11128\": \"Oyen AGDM\",\n    \"11154\": \"Pollockville AGDM\",\n    \"11184\": \"Rosemary IMCIN\",\n    \"11213\": \"Strathmore IMCIN\",\n    \"11314\": \"Tawatinaw AGCM\",\n    \"11330\": \"Linden AGCM\",\n    \"11346\": \"Spring Creek Moose\",\n    \"11366\": \"Flattop Lookout\",\n    \"11377\": \"Sunshine Village\",\n    \"11383\": \"Doig Lookout\",\n    \"11417\": \"Pinto Lookout\",\n    \"11439\": \"Burns Creek\",\n    \"11450\": \"Notikewin LO\",\n    \"11461\": \"Goathaunt\",\n    \"11476\": \"Goose Mountain Lookout - AFS GM\",\n    \"11494\": \"House Mountain Lookout -AFS HM\",\n    \"11506\": \"Milk River Ridge\",\n    \"11526\": \"Prentiss\",\n    \"11543\": \"Spionkop Creek\",\n    \"11554\": \"Chapel Rock\",\n    \"11565\": \"Willoughby Ridge\",\n    \"11576\": \"James River Headwaters\",\n    \"11582\": \"South Ghost Headwaters\",\n    \"11598\": \"Tennessee Creek\",\n    \"11612\": \"Dogrib Creek\",\n    \"11623\": \"Peavine\",\n    \"11634\": \"High Prairie - Banana Belt\",\n    \"11648\": \"Prairie Bluff\",\n    \"11662\": \"Southesk\",\n    \"11679\": \"Job Creek\",\n    \"11693\": \"Scotch Camp\",\n    \"11704\": \"Little Paddle Headwaters\",\n    \"11715\": \"Pine Coulee FP\",\n    \"11720\": \"St. Mary Ranger Station\",\n    \"11734\": \"Vicary Creek\",\n    \"11745\": \"Chief Customs\",\n    \"11762\": \"Forget Me Not Mountain\",\n    \"11773\": \"Bow Summit (New)\",\n    \"11787\": \"Three Isle Lake\",\n    \"11799\": \"Akamina 2\",\n    \"11811\": \"Pelletier Creek\",\n    \"11831\": \"Mount Odlum III\",\n    \"11843\": \"Little Elbow Summit\",\n    \"11858\": \"Evan-Thomas Creek\",\n    \"11876\": \"Pekisko\",\n    \"11887\": \"Pasque Creek\",\n    \"11898\": \"South Racehorse Creek\",\n    \"11901\": \"Dickson Dam\",\n    \"11904\": \"Paddle River Headwaters\",\n    \"11954\": \"Waterton Red Rock\",\n    \"11980\": \"Medicine Lodge\",\n    \"11991\": \"Livingstone\",\n    \"12002\": \"Porcupine Lookout\",\n    \"12025\": \"Battle River Headwaters\",\n    \"12040\": \"Neir AGDM\",\n    \"12061\": \"Leedale AGDM\",\n    \"12087\": \"Tomahawk AGDM\",\n    \"12116\": \"Elbow Ranger Station\",\n    \"12139\": \"St. Mary Reservoir\",\n    \"12319\": \"Black Diamond AGCM\",\n    \"12321\": \"Edgerton AGCM\",\n    \"15219\": \"Acadia Valley AGCM\",\n    \"15282\": \"Bullhorn Coulee Reservoir Inlet\",\n    \"15303\": \"Bullhorn Headwaters\",\n    \"15322\": \"Cross Drain 5\",\n    \"15328\": \"Milk River Ridge Reservoir\",\n    \"15344\": \"Pine Coulee Reservoir\",\n    \"15350\": \"Scalp Creek\",\n    \"15364\": \"Prairie River\",\n    \"15390\": \"Cuthead Lake\",\n    \"15419\": \"Rush Lake\",\n    \"15435\": \"Priddis Observatory\",\n    \"15448\": \"Spirit River Auto\",\n    \"15454\": \"Cox Hill\",\n    \"15460\": \"Gardiner Headwaters\",\n    \"15466\": \"Ghost Diversion\",\n    \"15528\": \"Lost Creek South\",\n    \"15538\": \"Westcastle\",\n    \"15549\": \"Crowsnest\",\n    \"15639\": \"Fort Vermilion\",\n    \"15643\": \"Lacombe CDA 2\",\n    \"15660\": \"Onefour CDA\",\n    \"15670\": \"Vauxhall CDA CS\",\n    \"15680\": \"Magee Lake\",\n    \"15685\": \"Mayerthorpe\",\n    \"15690\": \"Water Valley\",\n    \"15695\": \"Camrose\",\n    \"15704\": \"Cardston\",\n    \"15713\": \"Wainwright CFB Airfield 21\",\n    \"15721\": \"Beaverlodge RCS\",\n    \"15729\": \"Bow Island\",\n    \"15741\": \"Brooks\",\n    \"15753\": \"Calgary Intl A\",\n    \"20451\": \"Altawan Evaporation Station\",\n    \"37178\": \"Luscar Creek\",\n    \"37198\": \"Ghost Ranger Station\",\n    \"37201\": \"Jumpingpound Ranger Station\",\n    \"37204\": \"Sullivan Creek\",\n    \"37207\": \"Sundre South\",\n    \"37722\": \"Cabin Lake AGCM\",\n    \"37731\": \"Youngstown AGCM\",\n    \"38222\": \"Pika Run\",\n    \"45248\": \"Highwood Auto\",\n    \"45429\": \"Willow Creek Auto\",\n    \"45441\": \"Yaha Tinda Auto\",\n    \"45452\": \"Kananaskis Boundary Auto\",\n    \"49983\": \"Peter Lougheed Park\",\n    \"64240\": \"North Ghost Auto\",\n    \"64250\": \"Livingston Gap Auto\",\n    \"64259\": \"Castle Auto\",\n    \"64269\": \"Poll Haven Auto\",\n    \"64278\": \"Blairmore Ranger Station Auto\",\n    \"64289\": \"Cypress Hills\",\n    \"64302\": \"Wildhay Auto\",\n    \"64311\": \"Schwartz Creek  Auto\",\n    \"64322\": \"Grande Cache Auto\",\n    \"64333\": \"Entrance Auto\",\n    \"64338\": \"Picadelly Auto\",\n    \"64342\": \"Ponderosa Auto\",\n    \"64346\": \"Lambert Auto\",\n    \"64350\": \"Whitesands Auto\",\n    \"64354\": \"Bistcho Lake Auto\",\n    \"64357\": \"Kakwa Auto\",\n    \"64361\": \"Mistanusk Auto\",\n    \"64365\": \"Bovine Creek AUTO\",\n    \"64368\": \"Ground Zero Auto\",\n    \"64371\": \"Dunkirk Auto\",\n    \"64375\": \"Keane Auto\",\n    \"64379\": \"Shell Hamberg\",\n    \"64386\": \"Jackpine AUTO\",\n    \"64389\": \"Clearwater Auto\",\n    \"64392\": \"Ram Falls Auto\",\n    \"64395\": \"Elk River Auto\",\n    \"64398\": \"Kootenay Plains Auto\",\n    \"64402\": \"Salteaux Auto\",\n    \"64406\": \"Marten Hills AUTO\",\n    \"64409\": \"Doucette Auto\",\n    \"64412\": \"Kinuso Auto\",\n    \"64415\": \"Loon River Auto\",\n    \"64418\": \"Freeman Auto\",\n    \"64422\": \"Eta Lake Auto\",\n    \"64426\": \"Meekwap Auto\",\n    \"64429\": \"Windfall Auto\",\n    \"64432\": \"Fox Creek Auto\",\n    \"64435\": \"Timeu Creek Auto\",\n    \"64438\": \"Berland Hills Auto\",\n    \"77444\": \"Agtech AGCM\",\n    \"517216\": \"Blackie AGCM\",\n    \"540406\": \"Hand Hills AGCM\",\n    \"540413\": \"Cereal AGCM\",\n    \"540420\": \"Patricia AGCM\",\n    \"540427\": \"Ralston AGCM\",\n    \"546634\": \"Bull Springs AGCM\",\n    \"549002\": \"Carway\",\n    \"592388\": \"Tide Lake AGCM\",\n    \"592403\": \"Sheerness AGCM\",\n    \"592406\": \"Social Plains AGCM\",\n    \"592422\": \"Buffalo AGCM\",\n    \"674815\": \"Keoma AGCM\",\n    \"710403\": \"Elbow Auto\",\n    \"710429\": \"Casket Mountain Auto\",\n    \"710431\": \"Three Creeks AGCM\",\n    \"710450\": \"Economy Creek Auto\",\n    \"710451\": \"Snuff Mountain Auto\",\n    \"710452\": \"Battle River Auto\",\n    \"710453\": \"Chinchaga Auto\",\n    \"710454\": \"Fontas Auto\",\n    \"710455\": \"Hotchkiss Auto\",\n    \"710456\": \"Notikewin Auto\",\n    \"710457\": \"Algar Auto\",\n    \"710458\": \"Birch Mountain Auto\",\n    \"710459\": \"Edra Auto\",\n    \"710460\": \"Ells River Auto\",\n    \"710461\": \"Johnson Lake Auto\",\n    \"710462\": \"Muskeg Mountain Auto\",\n    \"710463\": \"Richardson  Auto\",\n    \"710464\": \"Cambrian Auto\",\n    \"710465\": \"Kimiwan Auto\",\n    \"710466\": \"Fort Smith Climate\",\n    \"710467\": \"Cadotte Auto\",\n    \"710468\": \"Keg Auto\",\n    \"710469\": \"Divide Hills AGCM\",\n    \"710470\": \"Fort Chipewyan Auto\",\n    \"710473\": \"Homestead Coulee AGCM\",\n    \"710474\": \"Iddesleigh AGCM\",\n    \"710475\": \"Vulcan AGCM\",\n    \"710476\": \"Bald Mountain Auto\",\n    \"710477\": \"Frying Pan Auto\",\n    \"710478\": \"Puskwaskau Auto\",\n    \"710479\": \"Saddle Hills Auto\",\n    \"710480\": \"White Mountain Auto\",\n    \"710483\": \"Whitemud Auto\",\n    \"710485\": \"Deer Mountain Auto\",\n    \"710494\": \"Flat Top Auto\",\n    \"710497\": \"Hawk Hills Auto\",\n    \"710498\": \"Kakwa Tower Auto\",\n    \"710499\": \"Legend Auto\",\n    \"710509\": \"Bison Lake Auto\",\n    \"710510\": \"Buckton Auto\",\n    \"710511\": \"Jean Lake Auto\",\n    \"710512\": \"Footner Lake Auto\",\n    \"710513\": \"Antler West Auto\",\n    \"710514\": \"Basset  Auto\",\n    \"710515\": \"Rainbow Lake Auto\",\n    \"710516\": \"Medicine Lodge Auto\",\n    \"710517\": \"Moberly Auto\",\n    \"710518\": \"Roma\",\n    \"710519\": \"Pierre\",\n    \"710522\": \"Surmont\",\n    \"710523\": \"Ansell Auto\",\n    \"710524\": \"Carrot Creek Auto\",\n    \"710525\": \"Fish Creek Auto\",\n    \"710526\": \"Huckleberry Auto\",\n    \"710527\": \"Lovett Auto\",\n    \"710528\": \"Mayberne Auto\",\n    \"710529\": \"Simonette Auto\",\n    \"710530\": \"Steen River Auto\",\n    \"710531\": \"High Level RCS\",\n    \"710532\": \"Ketchum Creek AGCM\",\n    \"710534\": \"Lloydminster Mobile\",\n    \"710535\": \"Hines Creek Mobile\",\n    \"710536\": \"Pibroch AGCM\",\n    \"710543\": \"Wardlow AGCM\",\n    \"710544\": \"Winnifred AGCM\",\n    \"710545\": \"Enchant 2 AGCM\",\n    \"710546\": \"White Rabbit Creek\",\n    \"710547\": \"Picture Butte LITE\",\n    \"710550\": \"Marwayne LITE\",\n    \"710551\": \"Myrnam LITE\",\n    \"852371\": \"Fort Mcmurray CS\",\n    \"859574\": \"Kirriemuir AGCM\",\n    \"859591\": \"Fleet AGCM\",\n    \"859622\": \"Gooseberry Lake AGCM\",\n    \"859646\": \"Lathom AGCM\",\n    \"859674\": \"Pinhorn AGCM\",\n    \"859691\": \"Warner AGCM\",\n    \"859718\": \"Gladstone AGCM\",\n    \"860680\": \"Slave Lake RCS\",\n    \"860690\": \"Fort Chipewyan RCS\",\n    \"860726\": \"Beaverdam AGCM\",\n    \"860750\": \"Hoselaw AGCM\",\n    \"860799\": \"Sandy Lake AGCM\",\n    \"2092051\": \"Lodge Creek AGCM\",\n    \"3133828\": \"Ardenville AGCM\",\n    \"5413037\": \"Hazel AGCM\",\n    \"5493961\": \"Deadwood AGCM\",\n    \"5867919\": \"Tompkins Landing AGCM\",\n    \"5913047\": \"Rocky Lane AGCM\",\n    \"5924044\": \"Keg River AGCM\",\n    \"7386318\": \"Sunnynook AGCM\",\n    \"7479324\": \"Finnegan AGCM\",\n    \"7484011\": \"Cappon AGCM\",\n    \"8302846\": \"Verger AGCM\",\n    \"10757196\": \"Campsie Auto\",\n    \"10757353\": \"Beaver Mines\",\n    \"10757448\": \"Ranfurly Auto\",\n    \"14494886\": \"Edmonton South Campus UA\",\n    \"14714629\": \"Rainier AGCM\",\n    \"14999334\": \"Chip Alpac\",\n    \"15425129\": \"Duck Lake AGCM\",\n    \"15873190\": \"Island Lake South\",\n    \"19738915\": \"St. Francis AGCM\",\n    \"20889312\": \"Pleasant View AGCM\",\n    \"20889591\": \"Kinikinik AGCM\",\n    \"21186998\": \"Carrot Creek AGCM\",\n    \"29556967\": \"Evansburg 2 AGCM\",\n    \"31425225\": \"Berland Auto\",\n    \"31425714\": \"Imperial Auto\",\n    \"31425798\": \"Pass Creek Auto\",\n    \"31425837\": \"Wabasca Auto\",\n    \"31425921\": \"Swan Dive Auto\",\n    \"31425991\": \"Tony Auto\",\n    \"31426049\": \"Vega Auto\",\n    \"31426102\": \"Whitecourt Auto\",\n    \"32594910\": \"Peace River Mobile\",\n    \"33222385\": \"Redwater Industrial\",\n    \"39270953\": \"Willow Creek 1\",\n    \"39270970\": \"Chisholm Auto\",\n    \"39270985\": \"Cowpar Lake Auto\",\n    \"39271000\": \"Eagle Auto\",\n    \"39271015\": \"Heart Lake Auto\",\n    \"39271030\": \"Kirby Lake Auto\",\n    \"39271045\": \"Leismer Auto\",\n    \"39271060\": \"May Auto\",\n    \"39271075\": \"Rock Island Lake Auto\",\n    \"39271090\": \"Round Hill Auto\",\n    \"39271105\": \"Sand River Auto\",\n    \"39271120\": \"Wandering River Auto\",\n    \"39273069\": \"Chipewyan Lakes Auto\",\n    \"39273087\": \"Panny Auto\",\n    \"39273104\": \"Sandy Lake Auto\",\n    \"39273121\": \"Trout Moutain Auto\",\n    \"39273138\": \"Gift Lake Auto\",\n    \"39273155\": \"Red Earth Auto\",\n    \"39273173\": \"Enilda  Auto\",\n    \"39273190\": \"Muskwa  Auto\",\n    \"39273208\": \"Otter Lakes Auto\",\n    \"39273225\": \"Sweathouse Auto\",\n    \"39273242\": \"Teepee Lake Auto\",\n    \"39273260\": \"Talbot Lake Auto\",\n    \"39273277\": \"Whitefish Auto\",\n    \"39273294\": \"Salt Prairie Auto\",\n    \"39273311\": \"Calgary Springbank A\",\n    \"39273326\": \"Whitemud Creek AGCM\"\n}"
+				}
+			]
+		},
+		{
+			"name": "/updateFetchData",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "QVCeD5Bp8C7tv3g0nL3572K811dMr7aN72FIcamk",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x-api-key",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/updateFetchData",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"updateFetchData"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"station_id\": \"15219\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/updateFetchData",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"updateFetchData"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "78"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 01 Dec 2022 18:52:54 GMT"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "c4900a88-ff64-44c1-9f34-5c9de44007d5"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "ceuweHf-PHcFnrA="
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-6388f802-6bb40e7e34c5364a52a93dd7;Sampled=0"
+						},
+						{
+							"key": "X-Cache",
+							"value": "Miss from cloudfront"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 005feeb191354cdd4c4f9057f59bef50.cloudfront.net (CloudFront)"
+						},
+						{
+							"key": "X-Amz-Cf-Pop",
+							"value": "DEN50-C1"
+						},
+						{
+							"key": "X-Amz-Cf-Id",
+							"value": "R8x5h4AJqczo2QzMWLhX7Ti5aZ7fvkPSUzOULxSKoetTWKjegijNxw=="
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"status\": \"Update/fetch will be processed in few minutes\"\n}"
+				},
+				{
+					"name": "/Failed",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"station_id\": 10544}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/updateFetchData",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"updateFetchData"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "68"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 01 Dec 2022 21:13:38 GMT"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "37c8425e-ca59-4458-a6e5-c2dedc6cf317"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "cfDX1HqTvHcF9aw="
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-638918fe-2f3890ed41eca5c135db2bed;Sampled=0"
+						},
+						{
+							"key": "X-Cache",
+							"value": "Error from cloudfront"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 d7dd12c04fd34e69d212dc8db302bfc2.cloudfront.net (CloudFront)"
+						},
+						{
+							"key": "X-Amz-Cf-Pop",
+							"value": "DEN50-C1"
+						},
+						{
+							"key": "X-Amz-Cf-Id",
+							"value": "NXxFQfcOm65TpQjk6omVVRkEBFAfkjKHMTXf_dnL_v0u3pBxU4gZqg=="
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 400,\n    \"error\": \"No Files exist for station id: 10544\"\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://c2lr7nza2g.execute-api.us-west-2.amazonaws.com/dev",
+			"type": "string"
+		}
+	]
+}

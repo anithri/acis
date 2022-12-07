@@ -134,3 +134,16 @@ main > header > button {
 
     text-align: center
 }
+
+.refreshBtn {
+
+    --tw-bg-opacity: 1;
+
+    background-color: rgba(34, 197, 94, var(--tw-bg-opacity));
+
+    text-align: center;
+
+    --tw-text-opacity: 1;
+
+    color: rgba(255, 255, 255, var(--tw-text-opacity))
+}
